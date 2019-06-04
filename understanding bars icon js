@@ -1,0 +1,11 @@
+set the burger icon to display none
+
+when the screen gets down to the chosen size:
+display none all of the <li>s in the navbar
+float the burger icon to the right and display block it
+
+We use a JS function to add a class to the top-nav bar when the user clicks on the icon. This is done by specifying the class inside of a mediaquery of the correct screen size. This however will not show up as
+
+the important point: class="topnav responsive", is selected in a media query as '.topnav.responsive' with a double point. Thus the burger works by adding this class to the element with the topnav class.
+
+So we write the media query and then add the class when it is clicked and create the class="topnav responsive" class. Similarly if the class is anything but "topnav" (i.e. "topnav responsive" then we change it (back) to topnav)
