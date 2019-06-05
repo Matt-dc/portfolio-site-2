@@ -12,31 +12,30 @@
     <div id="top-nav" class="top-nav">
       <nav>
         <ul>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="top-nav-item" id="li-1"><a href="https://github.com/Matt-dc"><i class="fab fa-github"></i>Github</a></li>
+          <li class="top-nav-item" id="li-2"><a href="https://www.linkedin.com/in/matt-dc/"><i class="fab fa-linkedin-in"></i>LinkedIn</a></li>
+          <li class="top-nav-item"><a href="cv.pdf"><i class="far fa-file-pdf"></i>CV</a></li>
           <li class="bars" onclick="toggleMenu()"><i class="fa fa-bars fa-2x"></i></li>
         </ul>
       </nav>
     </div>
 
     <section>
-
-      <div id="about" class="section">
-        <h2>About me</h2>
-        <img src="profile_img.jpg" alt="profile img">
-        I am a self-taught software developer from the UK, with a background in applied maths and statistics.
+        <div id="about" class="section">
+          <div class="grid-container">
+            <h1 id="title-name">Matt Cooper</h1>
+            <img id="profile-img" src="profile_img.jpg" alt="profile img">
+            <p id="heading-text">Front-end developer from the UK with a background in applied maths and statistics</p>
+        </div>
       </div>
     </section>
 
 
     <section class="interest-section">
-        <header>
-          <h2 id="interests-header">Interests</h2>
-        </header>
-        <div class="interest-cover"></div>
+
+        <p id="about-first">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <p id="about-second">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
         <ul id="interests" class="interests">
           <li  id="react-icon" class="interest-icon">
             <img src="icons/react-icon.png" class="int" alt="">
@@ -72,50 +71,57 @@
 
 
 
-    <section class="portfolio-section">
+    <section class="">
+      <div id="portfolio-header-container">
+        <header>
+          <h2 id="portfolio-header">Portfolio</h2>
+        </header>
+      </div>
 
-    <header>
-      <h2 id="portfolio-header">Portfolio</h2>
-    </header>
 
-    <div class="portfolio">
-      <!-- <div id="top-line"></div> -->
+    <div class="portfolio portfolio-section">
         <div id="project1" class="project">
           <div class="project-image-container">
             <h3>React Journal App</h3>
-            <img src="projects/journalapp.png" alt="">
+            <img id="img1" src="projects/journalapp.png" alt="">
           </div>
-          <button class="btn view-demo"> <i class="fas fa-play"></i></button>
-          <a href="https://github.com/Matt-dc/React-Journalling-App"><button class="btn view-code"><i class="fab fa-github"></i></button></a>
+          <h3 id="project-text1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
         </div>
+
         <div id="project2" class="project">
+          <h3 id="project-text2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
           <div class="project-image-container">
             <h3>Python-Selenium webcrawler</h3>
-            <img src="projects/seleniumwebscraper.png" alt="">
-          </div>
-          <button class="btn view-demo"><i class="fas fa-play"></i></button>
-          <a href="https://github.com/Matt-dc/Python-selenium-webscraper"><button class="btn view-code"><i class="fab fa-github"></i></button></a>
+            <img id="img2" src="projects/seleniumwebscraper.png" alt="">
+           </div>
         </div>
-        <div id="project3" class="project">
-          <div class="project-image-container">
-            <h3>CRUD App in Flask</h3>
-            <img src="projects/flaskcrud.png" alt="">
-          </div>
-          <button class="btn view-demo"><i class="fas fa-play"></i></button>
-          <a href="https://github.com/Matt-dc/Flask-CRUD-App"><button class="btn view-code"> <i class="fab fa-github"></i></button></a>
+      </div>
+
+
+
+        <div id="project3" class="">
+            <img id="img3" src="projects/flaskcrud.png" alt="">
+          <h3 id="project-text3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
         </div>
 
         <div id="project4" class="project">
+          <h3 id="project-text4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
             <div class="project-image-container">
               <h3>Search App with Giphy API</h3>
-              <img src="projects/giphysearch.png" alt="">
+              <img id="img4" src="projects/giphysearch.png" alt="">
             </div>
-          <button class="btn view-demo"><i class="fas fa-play"></i></button>
-          <a href="https://github.com/Matt-dc/Search-App"> <button class="btn view-code"> <i class="fab fa-github"></i></button></a>
         </div>
-
-    </div>
   </section>
+
+  <div id="pre-pre-footer">
+    <p><i class="fab fa-linkedin-in"></i>Don't hesitate to get in touch through LinkedIn
+    <p id="pre-pre-footer-tag"><i class="far fa-file-pdf"></i>You can also contact me through my CV</p>
+  </div>
+
+  <div id="pre-footer">
+    <h2>Disclaimer</h2>
+    <p>This is some other text that will go here</p>
+  </div>
 
     <footer>
       <p>Copyright 2019   Matt Cooper   |   All rights reserved</p>

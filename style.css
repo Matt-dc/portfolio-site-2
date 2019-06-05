@@ -9,14 +9,21 @@ body {
 
 nav {
   width: 100%;
-  background-color:	#304360;
+  background-color:	#000;
   text-align: center;
+  padding: 1.6em 0;
 }
 
 nav ul li {
   list-style-type: none;
   display: inline;
-  padding: 1.8em;
+  margin: 2.5em;
+  padding: 1.4%;
+}
+
+nav ul li:hover {
+  background-color: #3c3c3c;
+  cursor: pointer;
 }
 
 .bars {
@@ -34,30 +41,93 @@ nav ul li a {
 
 section {
   width: 100%;
-  margin: 5% auto;
+  margin: 0 auto;
 }
 
 section h2 {
   text-align: center;
 }
 
-#about {
-  background-color:  	#3e586a;
-  color: #fff;
-  padding: 3em 0;
+.top-nav-item i {
+  margin-right: 1em;
+}
+
+#title-name {
+  grid-area: title;
+  font-size: 1.6em;
+  letter-spacing: 0.25em;
+  font-weight: lighter;
+  padding-top: 5%;
   text-align: center;
+}
+
+#heading-text {
+  grid-area: heading;
+  font-size: 0.8em;
+  font-weight: lighter;
+  padding-top: 5%;
+  text-align: center;
+
+}
+
+#profile-img {
+  width: 10em;
+  border-radius: 100%;
+  grid-area: img;
+}
+
+#about {
+  background-color:	#304360;
+  color: #fff;
+  padding: 7em 0;
   width: 100%;
 }
 
-#about img {
-  width: 10%;
-  border-radius: 100%;
+.grid-container {
+  width: 40%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+  'img title title title'
+  'img heading heading heading'
+  'img heading heading heading';
 }
 
+#interests-header {
+  width: 50%;
+  margin:0 auto;
+  margin-top: 5em;
+}
+
+#interests-title {
+  color: #3e586a;
+  font-size: 1.3em;
+  letter-spacing: 0.3em;
+  font-weight: lighter;
+  text-align: left;
+
+}
+
+#about-first {
+  font-size: 1.9em;
+  margin: 0 auto;
+  margin-top: 2em;
+  width: 30%;
+  padding-right: 20%;
+}
+#about-second {
+  font-size: 0.9em;
+  margin:4em auto;
+  font-weight: lighter;
+  width: 30%;
+  padding-left: 20%;
+
+}
 
 .interests {
-  margin: 0 auto;
-  max-width: 55em;
+  margin: 6em auto;
+  max-width: 45em;
   text-align: center;
   padding: 5em 0;
   display: grid;
@@ -70,10 +140,12 @@ section h2 {
   position: relative;
   z-index: 2;
   list-style-type: none;
+  opacity: 0.8;
+
 }
 
 img.int {
-  height:40px;
+  height:27px;
   margin-bottom: 12px;
   animation: rollout 0.9s ease-out;
 
@@ -89,8 +161,6 @@ img.int {
 }
 
 
-
-
 #projects {
     text-align: center;
     display: grid;
@@ -99,56 +169,106 @@ img.int {
 
 
 .portfolio-section {
-  background-color:	#4c8a84;
+  background-color:	#fff;
   color: #000;
-  padding: 10em 0;
-  width: 100%;
+  padding: 2em 0;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.portfolio {
-  background-color:	#4c8a84;
-  display: grid;
-  position: relative;
-  grid-gap: 40px;
-  grid-template-columns: repeat(4, 1fr);
+#portfolio-header-container {
+  padding: 4em 0;
+  background-color: #f8f8f8;
+}
+
+#portfolio-header {
+  width: 20%;
+  background-color: #fff;
+  padding: 4em;
+  border: 1px dotted #4c8a84;
   margin: 0 auto;
-  text-align: center;
-  padding: 0 3em;
-  max-width: 55em;
-  z-index: 5;
-  overflow: hidden;
+  color: #333333;
+  font-weight: lighter;
+  font-size: 1.3em;
+  letter-spacing: 0.4em;
 }
 
 
 .project {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  max-width: 120px;
-  padding: 0.8em;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  margin: 9em 3em;
+}
+.project h3 {
+  padding: 10%;
+  font-size: 0.7em;
+  font-weight: lighter;
+
 }
 
 /* image + label holder */
 .project-image-container {
   position: relative;
-  max-width: 120px;
   line-height: normal;
   text-align: center;
   cursor: pointer;
   overflow: hidden;
   z-index: 3;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .project-image-container img {
-  background-color: red;
-  width: 120px;
-  height:120px;
+  width: 100%;
+  height: 100%;
   transition: opacity 0.4s ease-in, transform 0.4s;
 }
 
+
+
+#project-text1 {
+  border: 1px dotted #4c8a84;
+}
+#img2 {
+  width:50%;
+  margin-top: 3em;
+  height: auto;
+}
+#project-text2 {
+  font-size: 2.6em;
+}
+#project3 {
+  background-color:	#3e586a;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 3em 0;
+}
+#img3 {
+  width: 15%;
+  margin-bottom: 2em;
+}
+#project-text3 {
+  font-size: 0.9em;
+}
+#project4 {
+  width: 50%;
+  margin: 10em auto;
+}
+#img4 {
+  margin-top: 10em;
+}
+#project-text4 {
+  width: 50%;
+  height: 60%;
+  margin:0 auto;
+  background-color: #c6c6c6;
+}
+
+
 /* THE IMAGE ITSELF - expands inside overflow hidden*/
-.project-image-container:hover img {
+.project-image:hover img {
   z-index: 0;
   opacity: 0.7;
   transform: scale(1.2);
@@ -171,6 +291,44 @@ img.int {
 }
 
 
+#pre-pre-footer {
+  width: 100%;
+  background-color: #4c8a84;
+  margin: 6em 0;
+  padding: 4em 0;
+  text-align: right;
+  font-size: 1.4em;
+  color: #fff;
+}
+#pre-pre-footer p {
+  margin: 0 20%;
+}
+#pre-pre-footer p i {
+  margin-right: 2em;
+  font-size: 0.6em;
+}
+p#pre-pre-footer-tag {
+  font-size: 0.6em;
+  margin: 1em auto;
+  width: 50%;
+}
+#pre-footer {
+  width: 100%;
+  margin: 6em 0;
+  text-align: left;
+  font-size: 1em;
+}
+#pre-footer h2 {
+  margin: 3% 20%;
+  font-weight: lighter;
+  font-size: 3em;
+}
+#pre-footer p {
+  margin: 0 20%;
+  font-size: 0.8em;
+}
+
+
 footer {
   background-color:#41a48c;
   width: 100%;
@@ -180,7 +338,7 @@ footer {
 }
 
 footer > p {
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 
@@ -244,7 +402,7 @@ footer > p {
 
 
   /* for smartphones */
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 600px) and (max-width: 768px){
 
    body {
     background-color: pink;
@@ -254,6 +412,14 @@ footer > p {
     }
     nav ul li {
       padding: 1.5em;
+    }
+    .grid-container {
+      width: 50%;
+      grid-gap: 5px;
+      grid-template-areas:
+      'img'
+      'title'
+      'heading';
     }
     .interests {
       grid-template-columns: repeat(3, 1fr);
@@ -269,10 +435,11 @@ footer > p {
     .project {
       margin: 0 auto;
     }
+
 }
 
 /* for tablets */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width 999px){
 
   body {
     background-color: yellow;
@@ -280,11 +447,20 @@ footer > p {
   nav {
     padding: 2.5% 0;
   }
+  #title-name {
+    font-size: 3em
+  }
+  #profile-img {
+    width: 10em;
+  }
+  #about {
+    padding: 2em 0;
+  }
 
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (max-width 1500px){
 
   #projects {
     grid-template-columns: repeat(2, 1fr);
@@ -295,6 +471,7 @@ footer > p {
   nav {
     padding: 1.5% 0;
   }
+
 }
 
 
@@ -313,9 +490,3 @@ footer > p {
 }
 
 /* for desktop */
-@media only screen and (min-width: 1200px) {
-
-body {
-  background-color: #fff;
-  }
-}
