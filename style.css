@@ -14,21 +14,20 @@ nav {
   padding: 1.6em 0;
 }
 
-nav ul li {
+.top-nav li {
   list-style-type: none;
   display: inline;
   margin: 2.5em;
   padding: 1.4%;
 }
 
-nav ul li:hover {
+.top-nav li:hover {
   background-color: #3c3c3c;
   cursor: pointer;
 }
 
 .bars {
   display: none;
-  padding: 0.6% 3%;
   cursor: pointer;
   color: #fff;
 }
@@ -39,17 +38,13 @@ nav ul li a {
 }
 
 
-section {
+/* section {
   width: 100%;
   margin: 0 auto;
-}
+} */
 
 section h2 {
   text-align: center;
-}
-
-.top-nav-item i {
-  margin-right: 1em;
 }
 
 #title-name {
@@ -74,6 +69,7 @@ section h2 {
   width: 10em;
   border-radius: 100%;
   grid-area: img;
+  margin: 0 auto;
 }
 
 #about {
@@ -84,7 +80,7 @@ section h2 {
 }
 
 .grid-container {
-  width: 40%;
+  width: 27%;
   margin: 0 auto;
   display: grid;
   grid-gap: 5px;
@@ -122,7 +118,6 @@ section h2 {
   font-weight: lighter;
   width: 30%;
   padding-left: 20%;
-
 }
 
 .interests {
@@ -148,9 +143,7 @@ img.int {
   height:27px;
   margin-bottom: 12px;
   animation: rollout 0.9s ease-out;
-
 }
-
 
 .interest-cover {
   background-color: #fff;
@@ -160,13 +153,11 @@ img.int {
   z-index: 10;
 }
 
-
 #projects {
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 }
-
 
 .portfolio-section {
   background-color:	#fff;
@@ -193,6 +184,11 @@ img.int {
   letter-spacing: 0.4em;
 }
 
+#portfolio-header-tag {
+  letter-spacing: 0.2em;
+  font-size: 0.4em;
+  margin-top: 1em;
+}
 
 .project {
   display: grid;
@@ -204,7 +200,6 @@ img.int {
   padding: 10%;
   font-size: 0.7em;
   font-weight: lighter;
-
 }
 
 /* image + label holder */
@@ -225,9 +220,9 @@ img.int {
   transition: opacity 0.4s ease-in, transform 0.4s;
 }
 
-
-
 #project-text1 {
+  padding-top: 20%;
+  line-height: 3em;
   border: 1px dotted #4c8a84;
 }
 #img2 {
@@ -251,21 +246,25 @@ img.int {
 }
 #project-text3 {
   font-size: 0.9em;
+  width:40%;
+  margin: 0 auto;  margin: 0 auto;
+  line-height: 2em;
 }
 #project4 {
   width: 50%;
   margin: 10em auto;
 }
 #img4 {
-  margin-top: 10em;
+  margin-top: 0;
 }
 #project-text4 {
   width: 50%;
-  height: 60%;
-  margin:0 auto;
+  height: 40%;
+  margin: 0 auto;
+  line-height: 2em;
+  padding-top: 7%;
   background-color: #c6c6c6;
 }
-
 
 /* THE IMAGE ITSELF - expands inside overflow hidden*/
 .project-image:hover img {
@@ -290,7 +289,6 @@ img.int {
   opacity: 1;
 }
 
-
 #pre-pre-footer {
   width: 100%;
   background-color: #4c8a84;
@@ -309,7 +307,7 @@ img.int {
 }
 p#pre-pre-footer-tag {
   font-size: 0.6em;
-  margin: 1em auto;
+  margin: 2em auto;
   width: 50%;
 }
 #pre-footer {
@@ -346,28 +344,89 @@ footer > p {
 /* for x-tra small screens */
 @media only screen and (max-width: 600px) {
 
-  body {
-    background-color: green;
+  .top-nav li {
+    margin: 1.5em;
   }
   .top-nav a{
      display: none;
    }
+
+   nav {
+     width: 100%;
+     background-color:	#000;
+     text-align: center;
+     padding: 2em 0;
+   }
+
    .bars {
+     margin: 1.5em;
      float: right;
      display: block;
    }
-   nav {
-     padding: 2.5% 0;
-   }
+  .grid-container {
+    width: 100%;
+    grid-template-areas:
+    'img'
+    'title'
+    'heading';
+  }
+  #about-first, #about-second {
+    width: 80%;
+    padding: 1em 0;
+    margin: 0 auto;
+  }
+ #portfolio-header {
+    width: 70%;
+    padding: 2em 0;
+ }
+ #projects, .project {
+     display: block;
+ }
+ #img2 {
+   width:90%;
+   margin: 3em auto
+ }
+ #project-text2 {
+   font-size: 1.5em;
+   margin-top: 2em;
+ }
+ #img3 {
+   width:60%;
+ }
+#project4 {
+  width: 100%;
+  margin: 1em auto;
+  }
+#project-text4{
+  width: 70%;
+  padding: 8%;
+  margin: 3em auto;
+}
 
+#pre-pre-footer {
+  margin: 3em auto;
+  text-align: center;
+}
+#pre-pre-footer p, #pre-pre-footer-tag p {
+  margin: 2em auto;
+  width: 100%;
+}
+#pre-footer {
+  margin: 3em 0;
+}
+#pre-footer h2{
+  margin: 8% 10%;
+}
+footer {
+  width: 80%;
+  padding: 10%;
+  text-align: center;
+}
 }
 
 /* display bars icon */
 @media only screen and (max-width: 600px) {
 
-  body {
-    background-color: green;
-  }
   .top-nav.open {
      position: relative;
    }
@@ -376,10 +435,17 @@ footer > p {
      right: 0;
      top: 0;
   }
-  .top-nav.open a {
+  .top-nav.open li {
+    display: block;
+
+  }
+  .top-nav.open li a {
     float: none;
     display: block;
     text-align: left;
+  }
+  .top-nav.open li a i {
+    margin-right: 1em;
   }
   .interests {
     grid-template-columns: repeat(2, 1fr);
